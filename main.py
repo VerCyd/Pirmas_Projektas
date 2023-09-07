@@ -237,15 +237,6 @@
 # }
 # print(Studentu_duomenys)
 
-# Lietuvos_pilietis = {
-#     'id' :1,
-#     'Vardas': 'Antanas',
-#     'Amzius': 34,
-#     'Miestas': 'Klaipeda'
-# }
-# # print(lietuvos_pilietis)
-
-
 # 4.Sukurti žodyną su knygų informacija ir surikiuoti knygas pagal metus ir pavadinimus.
 
 
@@ -264,7 +255,7 @@
 
 
 # 2023-09-06
-# 1.Parašykite programą, kuri suskaičiuoja visų sveikujų skaičių nuo 1 iki n ėjimo sumą,
+# +1.Parašykite programą, kuri suskaičiuoja visų sveikujų skaičių nuo 1 iki n ėjimo sumą,
 # kur n yra vartotojo įvestas skaičius. Panaudokite "for" ciklą ir "if" sąlygos sakinį,
 # kad tikrintumėte, ar įvestas skaičius yra sveikasis;
 # n = int(input("Iveskite skaiciu: "))
@@ -276,7 +267,7 @@
 #         suma += skaicius
 #     print(f"suma nuo 1 iki {n} yra {suma}")
 
-# 2. Sukurkite programą, kurioje vartotojas gali įvesti mokinio pažymį (nuo 1 iki 10).
+# +2. Sukurkite programą, kurioje vartotojas gali įvesti mokinio pažymį (nuo 1 iki 10).
 # Programa turi grąžinti mokinio vertinimą
 # (pvz., "Neužtektinai", "Silpnai", "Vidutiniškai", "Gerai", "Puikiai"). Naudokite "if" sąlygos sakinį.
 
@@ -308,7 +299,7 @@
 # print(f"Mokinio vertinimas: {vertinimas}")
 
 
-# 3. Sukurkite programą, kuri leidžia vartotojui įvesti metus. Programa turi patikrinti, ar įvesti
+# +3. Sukurkite programą, kuri leidžia vartotojui įvesti metus. Programa turi patikrinti, ar įvesti
 # metai yra keliamieji (dalijasi iš 4) ir atspausdinti atitinkamą pranešimą
 
 # Metai = int(input("Iveskite metus:"))
@@ -319,7 +310,7 @@
 
 
 
-# 4. Turite žodyną, kuriame yra vardai ir amžius. Parašykite programą,kuri peržiūri žodyną ir išrenka tik
+# +4. Turite žodyną, kuriame yra vardai ir amžius. Parašykite programą,kuri peržiūri žodyną ir išrenka tik
 # tas poras, kuriose amžius yra didesnis arba lygus 18. Rezultatus patalpinkite naujame žodyne;
 # Asmenys ={
 #      'Jovita': 21,
@@ -336,7 +327,7 @@
 
 
 
-# 5. Leiskite vartotojui įvesti kelias prekes ir jų kainas. Sukurkite sąrašą, kuriame prekės yra žodynai,
+# +5. Leiskite vartotojui įvesti kelias prekes ir jų kainas. Sukurkite sąrašą, kuriame prekės yra žodynai,
 # kuriuose yra prekės pavadinimas ir kaina. Taip pat paskaičiuokite bendrą visų prekių kainą;
 # turi buti 1 while 1 if ir 2 for.
 # prekiu_krepselis = []
@@ -378,3 +369,139 @@
 #     print()
 # else:
 #     print()
+
+# 1. Sukurkite sąrašą temperatūros su temperatūromis. Patikrinkite kiekvieną temperatūrą sąraše ir išveskite "šilta"
+# (jei temperatūra virš 20) arba "šalta" (jei temperatūra 20 ar mažiau).
+# Temperaturos = ["20, 21, 22, 30, 18, 19, 5, 0, -1"]
+# if Temperatura in Temperaturos > 20:
+#         print(f" Temperatura {Temperaturos} yra silta")
+# else:
+#         print(f"Temperatura{Temperaturos} yra salta")
+
+
+
+
+
+
+# 2. Turite žodyną su studentų vardais ir jų pažymiais. Parašykite "for" ciklą,
+# kuris išveda kiekvieno studento vardą ir jo pažymį.
+# Studentai = {
+#      'Jovita': 7,
+#      'Aurelijus': 3,
+#      'Aurimas': 8,
+#      'Dovile': 8,
+#      'Ausra': 10
+#     }
+# for i in Studentai:
+#         break
+# print(Studentai)
+
+# 3. Sukurkite tuščią sąrašą sarasas ir leiskite vartotojui įvesti skaičius. Naudojant "while" ciklą, pridėkite
+# kiekvieną įvestą skaičių prie sąrašo. Ciklą nutraukite, kai vartotojas įveda 0.
+sarasas = []
+while True:
+        skaicius = int(input("Iveskite skaiciu arba nutraukite irase 0"))
+        if skaicius = 0:
+                break
+
+
+
+
+# prekiu_krepselis = []
+# while True:
+#     preke = input("Nurodykite preke arba irasykite zodi baigti: ")
+#     if not preke:
+#         break
+#     kaina = float(input("Iveskite prekes kaina: "))
+#     prekes_informacija = {"pavadinimas": preke, "kaina": kaina}
+#     prekiu_krepselis.append(prekes_informacija)
+# Krepselio_suma = sum(prekes_informacija ["kaina"] for prekes_informacija in prekiu_krepselis)
+# print("prekiu sarasas: ")
+# for prekes_informacija in prekiu_krepselis:
+#     print(f"Pavadinimas: {prekes_informacija['pavadinimas']}, Kaina: {prekes_informacija['kaina']}")
+# print (f"Benra kaina: {Krepselio_suma}")
+
+
+
+
+
+# 4. Turite žodyną, kuriame saugomi gėrimų pavadinimai ir jų kainos. Vartotojas įveda gėrimo pavadinimą,
+# o jūs patikrinkite, ar tokio pavadinimo gėrimas yra žodyne. Jei taip, išveskite jo kainą; jei ne,
+# išveskite pranešimą "Gėrimas nerastas".
+
+
+
+# 5. Patikrinkite, ar skaičiai sąraše yra lyginiai arba nelyginiai. Sukurkite du tuščius sąrašus:
+# vienas lyginiams ir kitą nelyginiams skaičiams, išrūšiuokite lyginius ir nelyginius skaičius iš skaičiai sąrašo.
+
+
+# vardai = ["Jonas", "Petras", "Marius", "Laura"]
+#
+# pirmas_vardas = vardai.pop(2) (spauzdina varda po tam tikru skaiciumi. tuscias grazina paskutini varda)
+# print(pirmas_vardas)
+
+# vardai.insert(1, "Giedrius") (nurodai i pozicija kur ideti ir pridedi i ta vieta komanda index)
+# print(vardai)
+
+# vardai.append("Giedrius") (pridedi i gala)
+# print(vardai)
+
+# vardai.sort(reverse=True(apsuka nuo z iki a)) rusiuoja pagal abecele A-Z
+# print(vardai)
+
+# vardai.remove("Jonas")
+# print(vardai)
+
+# vaisiai = ("Obuolys", "Kriause", "Bananas", "Braske")
+# vaisiai1 = ["Obuolys", "Kriause", "Bananas", "Braske"]
+# vaisiai = {
+#     "Obuolys"
+#     "Kriause"
+#     "Bananas"
+#     "Braske "
+# }
+# vaisiai2 = vaisiai[0]
+# print(vaisiai2)
+
+# skaiciai =(3.14, 2.71)
+# x, y = skaiciai
+# print(x)
+# print(y)
+
+# vaisiai1 = ["Obuolys", "Kriause", "Bananas", "Braske"]
+# for indeiksas, vaisius in enumerate(vaisiai1, start=1):
+#     print(f"{indeiksas}. {vaisius}")
+    # enumerate = (naudojamas sarasuose.eilutese) suteikti galimybe, kad gauti tiek elementu
+# kiek turime tame objekte. suskaiciuoja ir sunumeruoja viska.
+
+# # funkcija open
+# with open("failo_pavadinimas.txt", 'w', encoding='utf-8') as file:
+#     content = file.write("Kuriame nauja faila")
+#     print(content)
+
+# with open("failo_pavadinimas.txt", 'w', encoding='utf-8') as file:
+#     content = file.write("Kuriame nauja faila")
+
+# with open("failo_pavadinimas.txt", 'a', encoding='utf-8') as file:
+#     content = file.write("\nPapildomas tekstas")
+
+    # r = read
+    # w =
+    # a = apend (papildo)
+    # b = forbaner
+
+# with open("failo_pavadinimas.txt", 'r', encoding='utf-8') as file:
+#     content = file.read()
+#     print(content)
+
+# with open("failo_pavadinimas.txt", 'r', encoding='utf-8') as file:
+#     for eilute in file:
+#         print(eilute.strip())
+#
+# with open("vaisiai.txt", 'w', encoding='utf-8') as file:
+#         file.write('\nObuolys, \nKriause, \nBananas, \nBraske.')
+#
+# vaisiai = []
+# with open("vaisiai.txt", 'r', encoding='utf-8') as file:
+#         vaisiai = file.readline()
+#         print(vaisiai)
