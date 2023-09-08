@@ -399,10 +399,10 @@
 # 3. Sukurkite tuščią sąrašą sarasas ir leiskite vartotojui įvesti skaičius. Naudojant "while" ciklą, pridėkite
 # kiekvieną įvestą skaičių prie sąrašo. Ciklą nutraukite, kai vartotojas įveda 0.
 sarasas = []
-while True:
-        skaicius = int(input("Iveskite skaiciu arba nutraukite irase 0"))
-        if skaicius = 0:
-                break
+# while True:
+#         skaicius = int(input("Iveskite skaiciu arba nutraukite irase 0"))
+#         if skaicius = 0:
+#                 break
 
 
 
@@ -505,3 +505,106 @@ while True:
 # with open("vaisiai.txt", 'r', encoding='utf-8') as file:
 #         vaisiai = file.readline()
 #         print(vaisiai)
+
+
+# def pasisveikinimas(vardas):
+#         sveikinimas = f"Sveiki, {vardas}"
+#         # return sveikinimas grazina funkcija, kuria atlieka
+#
+# vardas = input("Iveskite savo varda: ")
+# sveikinimas = pasisveikinimas(vardas)
+# print(sveikinimas)
+
+# def ar_lyginis(skaicius):
+#         if skaicius % 2 == 0:
+#                 return True
+#         else:
+#                 return False
+#
+# skaicius = 7
+# if ar_lyginis(skaicius):
+#         print(f"{skaicius} yra lyginis")
+# else:
+#         print(f"{skaicius} yra nelyginis")
+
+# def ar_lyginis(skaicius):
+#         if skaicius % 2 == 0:
+#                 return True
+#         else:
+#                 return False
+#
+# skaicius = int(input("Iveskite skaiciu: "))
+# if ar_lyginis(skaicius):
+#         print(f"{skaicius} yra lyginis")
+# else:
+#         print(f"{skaicius} yra nelyginis")
+
+# def suma(a, b):
+#         rezultatas = a + b
+#         return rezultatas
+#
+# x = 5
+# y = 3
+# sumos_rezultatas = suma (x, y)
+# print(f"{x} + {y} = {sumos_rezultatas}")
+
+# def suma():
+#         rezultatas = 5 + 3
+#         return rezultatas
+#
+# x = 5
+# y = 3
+# sumos_rezultatas = suma ()
+# print(f"{x} + {y} = {sumos_rezultatas}")
+
+# def pasisveikinimas():
+#         print("Labas")
+#
+#
+# if __name__ == "__main__":
+#       pasisveikinimas()
+
+# def vidurkis(skaiciai): #vidurkis yra funkcijos pavadinimas. skaiciai - argumentas arba parametras.
+#         suma = sum(skaiciai)
+#         avg = suma / len(skaiciai)
+#         return avg
+#
+# sarasas = [10, 15, 20, 25, 30, 1]
+# rezultatas = vidurkis(sarasas)
+# print(f"saraso vidurkis yra: {rezultatas}")
+
+
+# 1. Patikrinti ar skaicius yra teigiamas ar neigiamas.
+# def ar_teigiamas(skaicius):
+#         if skaicius > 0:
+#                 return True
+#         else:
+#                 return False
+#
+# skaicius = -1
+# if ar_teigiamas(skaicius):
+#         print(f"{skaicius} yra teikiagas")
+# else:
+#         print(f"{skaicius} yra neigiamas")
+
+# 2, funkcija, kuri surastu didziausia skaiciu
+# def didziausias_skaicius(skaicius):
+#         didziausias = skaicius[0]
+#         for i in skaicius:
+#                 if i > didziausias:
+#                         didziausias = i
+#         return didziausias
+#
+# sarasas = [10, 658, 12, -2]
+# didziausias = didziausias_skaicius(sarasas)
+# print(f"didziausias yra: {didziausias_skaicius}")
+
+# 3. funkcija kuri sujungia 2 sarasus
+# def sujungti_sarasai (sarasas1, sarasas2):
+#         sujungtas_sarasas = sarasas1 + sarasas2
+#         return sujungtas_sarasas
+#
+# sarasas1 = [1, 3, 5, 7, 9]
+# sarasas2 = ["Kestas, Aurimas, ir kiti draugai"]
+# rezultatas = sujungti_sarasai(sarasas1, sarasas2)
+# print(rezultatas)
