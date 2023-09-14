@@ -932,51 +932,360 @@
 #             for preke in self.prekes:
 #                 print(f"")
 
-
+# class Prekybininkas:
+#     def __init__(self, vardas):
+#         self.vardas = vardas
+#         self.prekes = []
+#     def prideti_preke(self, preke, kiekis = 1):
+#         for _ in range(kiekis):
+#             self.prekes.append(preke)
+#     def pasalinti_preke(self, preke, kiekis = 1):
+#         if preke in self.prekes:
+#             for _ in range(kiekis):
+#                 self.prekes.remove(preke)
+#         else:
+#             print ("Nera tokios prekes")
+#     def prekiu_suma(self):
+#         suma = sum(preke[1] for preke in self.prekes)
+#         return suma
+#
+# pardavejas = Prekybininkas("Martynas")
+# preke1 = ("kava", 1.0)
+# preke2 = ("cukrus", 2.5)
+# preke3 = ("cigaretes", 1.5)
+# pardavejas.prideti_preke(preke1, 3)
+# pardavejas.prideti_preke(preke2)
+# pardavejas.prideti_preke(preke3, 3)
+# suma = pardavejas.prekiu_suma()
+# print(suma)
+#
+# pardavejas.pasalinti_preke(preke1, 1)
+# pardavejas.pasalinti_preke("preke4")
+# suma = pardavejas.prekiu_suma()
+# print("Prekiu sarasas: ")
+#
+# for preke in pardavejas.prekes:
+#     print(f"{preke[0]}: {preke[1]}")
+# print(f"Bendra visu prekiu suma: {suma}")
 
 # 4. Sukurkite klasę "Darbuotojas" (Employee), kuri turi atributus "vardas" (name), "pareigos" (position), ir "
 # atlyginimas" (salary). Parašykite metodus, kurie leidžia keisti darbuotojo pareigas ir atlyginimą;
-class Darbuotojas:
-    def __init__(self, vardas, pareigos, atlyginimas):
-        self.vardas = vardas
-        self.pareigos = pareigos
-        self.atlyginimas = atlyginimas
-    def darbuotojo_pareigos(self, uzimamos_pareigos):
-        if self.pareigos <= uzimamos_pareigos:
-            return f"darbuotojas {self.vardas}, uzima {self.pareigos} pareigas ir gauna {self.atlyginimas}$ atlginima"
+# class Darbuotojas:
+#     def __init__(self, vardas, pareigos, atlyginimas):
+#         self.vardas = vardas
+#         self.pareigos = pareigos
+#         self.atlyginimas = atlyginimas
+#     def darbuotojo_pareigos(self, uzimamos_pareigos):
+#         if self.pareigos <= uzimamos_pareigos:
+#             return f"darbuotojas {self.vardas}, uzima {self.pareigos} pareigas ir gauna {self.atlyginimas}$ atlginima"
+#
+# darbuotojas1 = Darbuotojas("Kestas", "Testavimo Inzinierius", 2100)
+# print(darbuotojas1.darbuotojo_pareigos("Testavimo inzinierius"))
 
-darbuotojas1 = Darbuotojas("Kestas", "Testavimo Inzinierius", 2100)
-print(darbuotojas1.darbuotojo_pareigos("Testavimo inzinierius"))
-
-
-
-#trukasta. turi buti galima keisti pareigas ir atlyginima. reikia infor1 pareigu keitimas (naujos pareigos), taip
-# pat su atlyginimu.
+# class Darbuotojas:
+#     def __init__(self, vardas, pareigos, atlyginimas):
+#         self.vardas = vardas
+#         self.pareigos = pareigos
+#         self.atlyginimas = atlyginimas
+#     def pakeisti_atlyginima(self, naujas_atlyginimas):
+#         self.atlyginimas = naujas_atlyginimas
+#     def pakeisti_pareigas(self, naujos_pareigos):
+#         self.pareigos = naujos_pareigos
+#
+# darbuotojas1 = Darbuotojas("Kestas", "Inzinierius", 2100)
+# darbuotojas1.pakeisti_atlyginima(2200)
+# darbuotojas1.pakeisti_pareigas("Inzineriu Vadovas")
+#
+# print (f"{darbuotojas1.vardas}, pareigos: {darbuotojas1.pareigos}, gaunamas uzmokestis: {darbuotojas1.atlyginimas}")
 
 
 
 # 5. Sukurkite klasę "Skaičiuotuvas", kuri turi metodus "sudėti" (add), "atimti" (subtract), "dauginti" (multiply) ir
 # "dalinti" (divide). Šie metodai priima du skaičius ir atlieka atitinkamą matematinę operaciją.
+
+
 # class Skaiciuotuvas:
-#     def __init__(self, sudeti, atimti, dauginti, dalinti):
-#         self.sudeti = sudeti
-#         self.atimti = atimti
-#         self.daugint = dauginti
-#         self.dalinti = dalinti
-#     def sudetis(self):
-#         for sudetis in self.sudeti:
-#             if sudetis == self.sudeti:
-#                 return
-#     def atimtis(self):
-#         for atimtis in self.atimti:
-#             if atimtis == self.atimti:
-#                 return
-#     def daugyba(self):
-#         for daugyba in self.dauginti:
-#             if daugyba == self.dauginti:
-#                 return
-#     def dalinimas(self):
-#         for dalinimas in self.dalinti:
-#             if dalinimas == self.dalinti:
-#                 return
+#     def add(self, a, b):
+#         return a+b
+#     def subtract(self, a, b):
+#         return a-b
+#     def multiply(self, a, b):
+#         return a*b
+#     def divide(self, a, b):
+#         if b == 0:
+#             return "Dalyba is 0 negalima"
+#         else:
+#             return a/b
+# a = 3
+# b = 7
+# a1 = Skaiciuotuvas()
+# suma = a1.add(a, b)
+# atimtis = a1.subtract(a, b)
+# daugyba = a1.multiply(a, b)
+# dalyba = a1.divide(a, b)
+# print(f"{suma}, {atimtis}, {daugyba}, {dalyba}")
+
+
+# Klases darbas 2023-09-13:
+#
+# 1. Sukurkite klasę "Klase", kuri turės savybę "pavadinimas" ir sąrašą "pamokos" (pamokų pavadinimai ir laikas).
+# Sukurkite klasę "Mokykla", kuri turės sąrašą klasių. Parašykite metodą, kuris išveda mokyklos tvarkaraštį
+# su visomis pamokomis.
+
+#teisingas:
+# class Klase:
+#     def __init__(self, pavadinimas):
+#         self.pavadinimas = pavadinimas
+#         self.pamokos = []
+#     def pamoka(self, pavadinimas, laikas):
+#         self.pamokos.append((pavadinimas, laikas))
+#     def tvarkarastis(self):
+#         tvarkarastis = f"klase: {self.pavadinimas} \n" # \n = is naujos eilutes
+#         for pamoka in self.pamokos:
+#             pavadinimas, laikas = pamoka
+#             tvarkarastis += f"- {pavadinimas}, laikas: {laikas} \n"
+#         return tvarkarastis
+# class Mokykla:
+#     def __init__(self, pavadinimas):
+#         self.pavadinimas = pavadinimas
+#         self.klases = []
+#     def sukurti_klase(self, klase):
+#         self.klases.append(klase)
+#     def bednras_tvarkarastis(self):
+#         galutinis_tvarkarastis = f"Mokykla: {self.pavadinimas} \n"
+#         for klase in self.klases:
+#             galutinis_tvarkarastis += klase.tvarkarastis()
+#         return galutinis_tvarkarastis
+#
+# mokykla = Mokykla("Svyturio Alus")
+#
+# klase1 = Klase("5b")
+# pamoka1 = klase1.pamoka("Geografija", "8:00 - 8:45")
+# pamoka2 = klase1.pamoka("Fizika", "8:55 - 9:40")
+#
+# klase2 = Klase("5c")
+# pamoka1 = klase2.pamoka("Ekonomika", "8:00 - 8:45")
+# pamoka2 = klase2.pamoka("Istorija", "8:00 - 8:45")
+#
+# mokykla.sukurti_klase(klase1)
+# mokykla.sukurti_klase(klase2)
+#
+# tvarkarastis = mokykla.bednras_tvarkarastis()
+#
+# print(mokykla.bednras_tvarkarastis())
+
+
+
+# Mano:
+# class Mokykla:
+#     def __init__(self, klases):
+#         self.klases = klases
+#     def klasiu_sarasas(self):
+#         class Klase:
+#             def __init__(self, pavadinimas):
+#                 self.pavadinimas = pavadinimas
+#                 self.pamokos = []
+#
+#             def pamokos_pavadinimas(self, sekanti_pamoka=1):
+#                 self.pamokos = sekanti_pamoka
+#                 return sekanti_pamoka
+#
+#             def pamokos_laikas(self):
+#                 self.
+#
+#         class Mokykla:
+#             def __init__(self, klases):
+#                 self.klases = klases
+#
+#             def klasiu_sarasas(self):
+
+# 2.Sukurkite klasę "Žaislas", kuri turėtų savybes, tokias kaip "pavadinimas" ir "amžiaus rekomendacija".
+# Tada sukurkite klasę "Vaikas", kuri turėtų vardą ir amžių. Tada sukurkite klasę "VaikasSuZaislu",
+# kuri turėtų šio vaiko objektą ir žaislo objektą. Patikrinkite, ar vaiko amžius atitinka žaislo amžiaus rekomendaciją.
+
+# class Zaislas:
+#     def __init__(self, pavadinimas, amziaus_rekomendacija):
+#         self.pavadinimas = pavadinimas
+#         self.amziaus_rekomendacija = amziaus_rekomendacija
+#
+# class Vaikas:
+#     def __init__(self, vardas, amzius):
+#         self.vardas = vardas
+#         self.amzius = amzius
+#
+# class VaikasSuZaislu:
+#     def __init__(self, vaikas, zaislas):
+#         self.vaikas = vaikas
+#         self.zaislas = zaislas
+#     def amziaus_tikrinimas(self):
+#         if self.vaikas.amzius >= self.zaislas.amziaus_rekomendacija:
+#             return f"{self.vaikas.vardas} gali zaisti su zaislu '{self.zaislas.pavadinimas}'"
+#         else:
+#             return f"{self.vaikas.vardas} negali zaisti su zaislu '{self.zaislas.pavadinimas}' del amziaus apribojimo"
+#
+# zaislas1 = Zaislas("Lego 'StarWars'", 12)
+# zaislas2 = Zaislas("'Monopolis'", 9)
+# zaislas3 = Zaislas ("Pripuciama moteris", 18)
+#
+# vaikas1 = Vaikas("Algis", 7)
+# vaikas2 = Vaikas("Austeja", 11)
+# vaikas3 = Vaikas("Tomas", 16)
+#
+# vaikas_su_zaislu1 = VaikasSuZaislu(vaikas1, zaislas1)
+# vaikas_su_zaislu2 = VaikasSuZaislu(vaikas2, zaislas2)
+# vaikas_su_zaislu3 = VaikasSuZaislu(vaikas3, zaislas3)
+# rezultatas = vaikas_su_zaislu1.amziaus_tikrinimas()
+# rezultatas1 = vaikas_su_zaislu2.amziaus_tikrinimas()
+# rezultatas2 = vaikas_su_zaislu3.amziaus_tikrinimas()
+# print(rezultatas, rezultatas1, rezultatas2)
+
+
+# 3. Sukurkite programą, kuri leidžia vartotojui valdyti krepšinio komandą. Galite kurti klases,
+# pvz., "Komanda", "Žaidėjas", "Treneris". Kiekvienas žaidėjas turėtų turėti savo statistiką(taiklumas,pozicija),
+# o treneris - instrukcijas ir strategiją(komandos sudeti). Programa turi leisti vartotojui pridėti naujus žaidėjus,
+# juos treniruoti ir valdyti komandos sudeti.
+
+# class Komanda:
+#     def __init__(self, pavadinimas):
+#         self.pavadinimas = pavadinimas
+#         self.treneris = Treneris()
+#         self.komanda = []
+#     def prideti_zaideja(self, zaidejas):
+#         self.komanda.append(zaidejas)
+#     def isimti_zaideja(self, zaidejas):
+#         if zaidejas in self.komanda:
+#             self.komanda.remove(zaidejas)
+#     def pasirinkti_treneri(self, treneris):
+#         self.komanda.append(treneris)
+#     def pakeisti_treneri(self, treneris):
+#         if treneris in self.komanda:
+#             self.komanda.remove(treneris)
+#     def komandos_informacija(self):
+#         print (f"{self.pavadinimas}, komandos zaidejai: ")
+#         for zaidejas in self.komanda:
+#             print(zaidejas.zaidejo_informacija())
+#     def strategijos_informacija(self):
+#         print (self.treneris.strategijos_informacija())
+# class Zaidejas:
+#     def __init__(self, vardas, pavarde, pozicija):
+#         self.vardas = vardas
+#         self.pavarde = pavarde
+#         self.taiklumas = 30
+#         self.pozicija = pozicija
+#     def upgrade(self):
+#         self.taiklumas += 5
+#         if self.taiklumas > 100:
+#             self.taiklumas = 100
+#     def zaidejo_informacija(self):
+#         return f"{self.vardas} {self.pavarde}, zaidzia pozicijoje: {self.pozicija}, kurio taiklumas {self.taiklumas}%"
+# class Treneris:
+#     def __init__(self):
+#         self.strategija = "ataka"
+#     def keisti_strategija(self, nauja_strategija):
+#         self.strategija = nauja_strategija
+#     def strategijos_informacija(self):
+#         return f"naudojama strategija: {self.strategija}"
+#
+# komanda1 = Komanda("Lietuva")
+# zaidejas1 = Zaidejas("Jonas", "Maciulis", "Gynejas")
+# zaidejas2 = Zaidejas("Jonas", "Valanciunas", "Centras")
+# zaidejas3 = Zaidejas("Simas", "Jasaitis", "Puolejas")
+# zaidejas4 = Zaidejas("Deividas", "Jurkus", "I-Zaudejas")
+#
+# komanda1.prideti_zaideja(zaidejas1)
+# komanda1.prideti_zaideja(zaidejas2)
+# komanda1.prideti_zaideja(zaidejas3)
+# komanda1.prideti_zaideja(zaidejas4)
+#
+# zaidejas1.upgrade()
+# zaidejas2.upgrade()
+# zaidejas3.upgrade()
+# zaidejas4.upgrade()
+#
+# komanda1.komandos_informacija()
+# komanda1.strategijos_informacija()
+
+#importuojame bibliotekas
+import pandas as pd
+import matplotlib.pyplot as plt
+#sarasas su duomenimis
+# duomenys = {"Vardas":["Jonas", "Ieva", "Petras", "Ona"],
+#             "Amzius": [25, 28, 22, 30]
+#             }
+# #sukuriame DataFrame = df is saraso
+# df = pd.DataFrame(duomenys)
+#
+# print(df)
+#
+# #filtruojame duomenis pagal amziu
+# jaunesni = df[df["Amzius"] < 25 ]
+# print(jaunesni)
+#
+# #jei norima paskaiciuoti vidutini amziu
+# #mean skirtas skaiciuoti vidurki.
+# vidutinis_amzius = df["Amzius"].mean()
+# print(f"Vidutinis amzius: {vidutinis_amzius}")
+
+
+# temperaturos = [24.5, 25.2, 23.8, 26.0, 22.5] #sarasas
+# sr = pd.Series(temperaturos)
+# # serija_rikiavimas = sr.sort_values()
+# # serija_rikiavimas = sr.sort_values(ascending=False)
+# # print(serija_rikiavimas)
+# print(f"pirmas elementas: {sr[0]}")
+
+# duomenys = {"Vardas":["Jonas", "Ieva", "Petras", "Ona"],
+#             "Amzius": [25, 28, 22, 30]
+#             }
+# df = pd.DataFrame(duomenys)
+# vardai = df["Vardas"]
+# print("Vardai")
+# print(vardai)
+
+# duomenys = {"Vardas":["Jonas", "Ieva", "Petras", "Ona"],
+#             "Amzius": [25, 28, 22, 30]
+#             }
+# df = pd.DataFrame(duomenys)
+# vardai = df["Vardas"]. to_list()
+# print("Vardai")
+# print(vardai)
+
+#Nauju stulpeliu pridejimas
+# duomenys = {"Vardas":["Jonas", "Ieva", "Petras", "Ona"],
+#             "Amzius": [25, 28, 22, 30]
+#             }
+# df = pd.DataFrame(duomenys)
+# df["Lytis"] = ["Vyras", "Moteris", "BBZ kas", "Moteris"]
+# print("Atnaujintas dataframe su nauju stulpeliu")
+# # print(df)
+# df.head(1)
+# df.to_excel("duomenys.xlsx", index=False)
+
+# plt.figure(figsize=(8,5))
+# plt.bar(df["Vardas"], df["Amzius"], color="red")
+# plt.xlabel("Vardas")
+# plt.ylabel("Amzius")
+# plt.title("Amzius pagal vardus")
+# plt.show()
+
+# data = {"Miestas": ["Vilnius","Kaunas", "Kaunas", "Vilnius"],
+#         "Lytis": ["Vyras", "Vyras", "Moteris", "Vyras"],
+#         "Amzius": [25, 25, 22, 30]
+#         }
+# data1 =pd.DataFrame(data)
+#
+# vidutinis_amzius_pagal_miesta = data1.groupby("Miestas")["Amzius"].mean()
+# print(vidutinis_amzius_pagal_miesta)
+
+# Sukurkite Pandas DataFrame(4 miestai ir ju populiacija).
+# Filtravimas ir paieška:
+# a. Filtruokite miestus, kurių populiacija yra didesnė nei 200 000 žmonių.
+# b. Raskite miestą, turintį mažiausią populiaciją.
+# Duomenų grupavimas ir agregavimas:
+# a. Pridėkite stulpelį "Šalis" prie ankstesnio DataFrame, kuriame nurodoma, kuri šalis priklauso kiekvienam miestui
+# (pvz., "Lietuva").
+# b. Grupuokite duomenis pagal "Šalis" stulpelį ir apskaičiuokite bendrą populiaciją kiekvienai šaliai.
+# Duomenų rikiavimas:
+# Rikiuokite miestus pagal populiaciją mažėjimo tvarka.
+
 
