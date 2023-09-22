@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 import psycopg2
 import time
-
+import numpy as np
 
 # +Sukurkite Pandas duomenų lentelę su 5 eilutėmis ir 3 stulpeliais.
 # +Pavadinkite stulpelius "Vardas", "Amžius" ir "Miestas".
@@ -278,9 +278,56 @@ import time
 # plt.savefig("grafikas.png")
 # plt.show()
 
-# 2023.09.21
-# Apskaičiuokite kiekvieno produkto mėnesinį pardavimų sumažėjimą per metus.
-# Sukurkite Matplotlib grafiką, kuriame būtų pateikti šie mėnesiniai sumažėjimai
-# kiekvienam produktui (x ašis - mėnesiai, y ašis - sumažėjimas, produkto
-# pavadinimas - linijos pavadinimas). Pridėkite pavadinimus ašims
-# ir bendrą pavadinimą grafikui.
+# 2023.09.22 - numpy (negalima ivedineti vardu, tiks skaiciai)
+# masyvas = np.array([1, 2, 3, 4, 5])
+# suma = np.sum(masyvas)  ## suma
+# vidurkis = np.mean(masyvas)  ## mean yra vidurkis
+# # print(f"Suma: {suma}\nVidurkis: {vidurkis}")
+#
+# mediana = np.median(masyvas)
+# nuokrypis = np.std(masyvas)
+# # print(f"Mediana: {mediana}\nNuokrypis: {nuokrypis}")
+#
+# masyvas2 = np.array([6, 2, 7, 4, 8])
+# moda = np.mod(masyvas, masyvas2)
+# # print(moda)
+#
+# suma1 = masyvas + masyvas2
+# min = np.min(masyvas)
+# max = np.max(masyvas2)
+# # print(suma1, min, max)
+#
+# matrica = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# # print(matrica)
+#
+# suma2 = np.sum(matrica)
+# # print(suma2)
+#
+# matrica2 = np.random.randint(1, 11, (4, 4))
+# print(matrica2)
+#
+# vidurkis2 = np.mean(matrica2)
+# # print(vidurkis2)
+#
+# vidurkis3 = np.mean(matrica2, axis = 0)                 # stulpelis
+# vidurkis4 = np.mean(matrica2, axis= 1)                  #eilute
+# print(vidurkis3, vidurkis4)
+
+# Darbas:
+# studentu_pazymiai = np.array([[7, 8, 9], [6, 4, 10], [10, 9, 10], [8, 8, 7]])
+# vidurkis = np.mean(studentu_pazymiai, axis = 1)
+# print(vidurkis)
+# mediana = np.median(studentu_pazymiai, axis = 1)
+# # print(mediana)
+#
+# for i in range(len(vidurkis)):
+#     print(f"Studentas {i + 1}: vidurkis {vidurkis[i]}, mediana {mediana[i]}")
+
+# masyvas33 = np.random.randint(1, 51,(1, 1))
+# maksis = np.argmax(masyvas33)
+# minas = np.argmin(masyvas33)
+# print(masyvas33, "\n", maksis, "\n", minas)
+
+masyvas = np.array([1, 2, 3, 4, 5])
+daugiau_uz_tris = masyvas[masyvas > 3]
+print(daugiau_uz_tris)

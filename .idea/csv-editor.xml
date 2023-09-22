@@ -10,13 +10,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="C:\Users\kesta\Downloads\automobiliai.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="C:\Users\kesta\Downloads\data-table.csv">
           <value>
             <Attribute>
@@ -59,6 +52,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\automobiliai.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\covid.csv">
           <value>
             <Attribute>
@@ -67,6 +67,13 @@
           </value>
         </entry>
         <entry key="\egzaminai.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\prekybos_duomenys.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

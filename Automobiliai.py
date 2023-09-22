@@ -25,6 +25,7 @@ x = df["Markė"]
 y = df["Modelis"]
 plt.hist(x, bins = 5, color = "red", alpha = 1, edgecolor = "black")
 plt.legend()
+plt.align("Mid")
 plt.xlabel("Marke")
 plt.ylabel("Parduodamu automobiliu suma")
 plt.title("Automobiliai")
